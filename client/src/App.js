@@ -4,6 +4,8 @@ import OnBoarding from './pages/OnBoarding'
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import {useCookies} from 'react-cookie'
 import { useState } from 'react'
+import React from 'react';
+
 
 const App = () => {
     const [cookies, setCookie, removeCookie] = useCookies(['user']);

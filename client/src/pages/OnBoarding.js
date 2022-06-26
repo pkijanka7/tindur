@@ -192,7 +192,7 @@ const OnBoarding = ({gestDirection, setGestDirection}) => {
                             onChange={handleChange}
                         />
 
-                        <input type="submit"/>
+                        <input type="submit" value="CREATE"/>
                     </section>
 
                     <section>

@@ -1,15 +1,17 @@
 import { useCookies } from 'react-cookie'
-import { useNavigate } from "react-router-dom";
+import backArrow from './../pages/images/backArrow.png'
+import { createBrowserHistory } from 'history'
 
 const ChatHeader = ({ user }) => {
     const [ cookies, setCookie, removeCookie ] = useCookies(['user'])
-    const navigate = useNavigate();
-
+    const history = createBrowserHistory()
+    const position = '/';
     const logout = () => {
         removeCookie('UserId', cookies.UserId)
         removeCookie('AuthToken', cookies.AuthToken)
-        navigate("/");
+        history.replace(position)
         window.location.reload()
+      
     }
 
     return (
@@ -20,7 +22,8 @@ const ChatHeader = ({ user }) => {
                 </div>
                 <h3>{user.first_name}</h3>
             </div>
-            <i className="log-out-icon" onClick={logout}>⇦</i>
+            {/* <i className="log-out-icon" onClick={logout}>⇦</i> */}
+            <img src={backArrow} className='log-out icon' onClick={ logout }></img>
         </div>
     )
 }

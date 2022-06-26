@@ -3,6 +3,8 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useCookies } from 'react-cookie'
 import CloseButtonIcon from './../pages/images/CloseButtonIcon.png'
+import React from 'react';
+
 
 const AuthModal = ({ setShowModal,  isSignUp, gestDirection }) => {
     const [email, setEmail] = useState(null)
@@ -76,7 +78,8 @@ const AuthModal = ({ setShowModal,  isSignUp, gestDirection }) => {
                     required={true}
                     onChange={(e) => setConfirmPassword(e.target.value)}
                 />}
-                <input className="secondary-button" type="submit"  placeholder='LOGIN'/>
+                <input className="secondary-button" type="submit" value='REGISTERs'/>
+                
                 <p>{error}</p>
             </form>
 

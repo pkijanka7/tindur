@@ -2,6 +2,7 @@ import Nav from '../components/Nav'
 import AuthModal from "../components/AuthModal"
 import {useState} from 'react'
 import {useCookies} from "react-cookie"
+import React from 'react';
 
 const Home = ({ setGestDirection }) => {
     
@@ -43,7 +44,6 @@ const Home = ({ setGestDirection }) => {
                     <AuthModal  setShowModal={setShowModal} isSignUp={isSignUp}/>
                 )}
             </div>
-          
             {/* <div className='gesture-test'>
                 <div className='gesture-h1'>
                 <h1>{gestDirection}</h1>

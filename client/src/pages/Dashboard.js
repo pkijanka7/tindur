@@ -3,6 +3,7 @@ import {useEffect, useState} from 'react'
 import ChatContainer from '../components/ChatContainer'
 import {useCookies} from 'react-cookie'
 import axios from 'axios'
+import React from 'react';
 
 const Dashboard = ({ gestDirection }) => {
     const [user, setUser] = useState(null)

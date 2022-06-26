@@ -1,6 +1,6 @@
-import whiteLogo from "../images/tinder_logo_white.png";
-import colorLogo from "../images/color-logo-tinder.png";
 import logo from "./../pages/images/logo.png"
+import React from 'react';
+
 
 const Nav = ({ authToken, minimal, setShowModal, showModal, setIsSignUp }) => {
   const handleClick = () => {
@@ -9,6 +9,7 @@ const Nav = ({ authToken, minimal, setShowModal, showModal, setIsSignUp }) => {
   };
 
   return (
+    <>
     <nav>
       <div className="logo-container">
         <img
@@ -27,6 +28,7 @@ const Nav = ({ authToken, minimal, setShowModal, showModal, setIsSignUp }) => {
         </button>
       )}
     </nav>
+    </>
   );
 };
 export default Nav;
